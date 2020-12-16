@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <title>测试</title>
 </head>
-<body>
-<img src="/image/3.png">
+<body onload="a()">
+<img src="/image/3.png" onclick="a()">
+<input type="button" onclick="a()">
 </body>
+<script src="js/jquery.js"></script>
+<script>
+    a()
+    function a(){
+        $.ajax(
+            {
+                type:"post",
+                url:"/Homepage/Homepage",
+                success:function (reust) {
+                    console.log(reust)
+                }
+
+            }
+        )
+    }
+
+</script>
 </html>

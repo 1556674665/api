@@ -4,7 +4,7 @@ import api.pojo.homePage.College_News;
 import api.pojo.homePage.Curriculum;
 import api.pojo.Img;
 import api.pojo.homePage.Teacher;
-import api.server.HomePageMpl;
+import api.server.HomePage.HomePageMpl;
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;

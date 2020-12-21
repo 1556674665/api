@@ -1,4 +1,4 @@
-package api.server;
+package api.server.HomePage;
 
 import api.dao.HomePageDAO;
 import api.pojo.homePage.College_News;

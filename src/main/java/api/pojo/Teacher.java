@@ -1,4 +1,4 @@
-package api.pojo.homePage;
+package api.pojo;
 
 public class Teacher {//老师表
     private int id;//主键

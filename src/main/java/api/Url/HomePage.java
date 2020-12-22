@@ -1,9 +1,9 @@
 package api.Url;
 
-import api.pojo.homePage.College_News;
-import api.pojo.homePage.Curriculum;
+import api.pojo.College_News;
+import api.pojo.Curriculum;
 import api.pojo.Img;
-import api.pojo.homePage.Teacher;
+import api.pojo.Teacher;
 import api.server.HomePage.HomePageMpl;
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/Homepage")
 public class HomePage {
     @Autowired
     HomePageMpl homePageMpl;
@@ -26,6 +25,14 @@ public class HomePage {
     @ResponseBody
     public JSON Homepage()
     {
+        /**
+         * rotation：首页轮播图 数据类型：Img对象
+         * curriculum：课程    数据类型：list  数据结构：[[[课程信息],[图片信息]]] 课程无图片时：[[[课程信息]]]
+         * college_News：新闻  数据类型：list 数据结构同上
+         * teacher：老师       数据类型：List 数据结构同上
+         *environment：环境    数据类型:List<Img>
+         *
+         * **/
         Map map =new HashMap();
         map.put("rotation",Rotation());
         map.put("curriculum",curriculum());
@@ -38,13 +45,13 @@ public class HomePage {
 
     public List<Img> Rotation()//获取轮播图
     {
-        return homePageMpl.Img(1);
+        return homePageMpl.Img(1,"");
     }
 
     public List curriculum()//获取课程信息
     {
         List<Curriculum> curriculumList=homePageMpl.curriculum();//获取课程信息
-        List<Img> imgList=homePageMpl.Img(2);//获取课程图片
+        List<Img> imgList=homePageMpl.Img(2,"");//获取课程图片
         if (imgList==null || imgList.size()==0){
             return curriculumList;
         }
@@ -52,7 +59,7 @@ public class HomePage {
 
         for (int i = 0; i <curriculumList.size() ; i++) {
             for (int j = 0; j <imgList.size() ; j++) {
-                if(imgList.get(j).getforeign_id()==curriculumList.get(i).getId()){
+                if(imgList.get(j).getForeign_id()==curriculumList.get(i).getId()){
                     List list=new ArrayList();
                     list.add(curriculumList.get(i));
                     list.add(imgList.get(j));
@@ -61,6 +68,7 @@ public class HomePage {
                 }
                 if(j==imgList.size()-1){
                     List list=new ArrayList();
+                    list.add("sb");
                     list.add(curriculumList.get(i));
                     data.add(list);
                 }
@@ -72,13 +80,13 @@ public class HomePage {
     {
         List data=new ArrayList();
         List<College_News> college_news=homePageMpl.College_News();
-        List<Img> college_img=homePageMpl.Img(3);
+        List<Img> college_img=homePageMpl.Img(3,"");
         if (college_img==null || college_img.size()==0){
                 return college_news;
         }
         for (int i = 0; i <college_news.size() ; i++) {
             for (int j = 0; j <college_img.size() ; j++) {
-                if (college_news.get(i).getId()==college_img.get(j).getforeign_id()){
+                if (college_news.get(i).getId()==college_img.get(j).getForeign_id()){
                     List list=new ArrayList();
                     list.add(college_news.get(i));
                     list.add(college_img.get(j));
@@ -95,13 +103,13 @@ public class HomePage {
     {
         List data=new ArrayList();
         List<Teacher> teacher=homePageMpl.teacher();
-        List<Img> imgList=homePageMpl.Img(4);
+        List<Img> imgList=homePageMpl.Img(4,"");
         if (imgList==null || imgList.size()==0){
             return teacher;
         }
         for (int i = 0; i <teacher.size() ; i++) {
             for (int j = 0; j <imgList.size() ; j++) {
-                if (teacher.get(i).getId()==imgList.get(j).getforeign_id()){
+                if (teacher.get(i).getId()==imgList.get(j).getForeign_id()){
                     List list=new ArrayList();
                     list.add(teacher.get(i));
                     list.add(imgList.get(j));
@@ -116,7 +124,7 @@ public class HomePage {
     }
     public List<Img> environment()//环境
     {
-        return  homePageMpl.Img(7);
+        return  homePageMpl.Img(7,"");
     }
 
 }

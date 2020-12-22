@@ -1,4 +1,4 @@
-package api.pojo.homePage;
+package api.pojo;
 
 public class Curriculum {//课程
     private int id;

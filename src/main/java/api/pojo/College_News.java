@@ -1,4 +1,4 @@
-package api.pojo.homePage;
+package api.pojo;
 
 public class College_News {//塞杰新闻
     private  int id;	//主键

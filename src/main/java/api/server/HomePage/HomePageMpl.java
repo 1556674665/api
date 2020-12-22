@@ -1,10 +1,10 @@
 package api.server.HomePage;
 
 import api.dao.HomePageDAO;
-import api.pojo.homePage.College_News;
-import api.pojo.homePage.Curriculum;
+import api.pojo.College_News;
+import api.pojo.Curriculum;
 import api.pojo.Img;
-import api.pojo.homePage.Teacher;
+import api.pojo.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +23,8 @@ public class HomePageMpl implements HomePageServer {
     }
 
     @Override
-    public List<Img> Img(int type) {
-        return homePage.Img(type);
+    public List<Img> Img(int type,String priture_name) {
+        return homePage.Img(type,priture_name);
     }
 
     @Override

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
 @Controller
-@RequestMapping("/img")
 public class Image {//返回图片和文件
 
 

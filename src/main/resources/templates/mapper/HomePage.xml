@@ -2,12 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="api.dao.HomePageDAO">
-    <resultMap id="img" type="api.pojo.Img">
-        <result column="id" property="id"/>
-        <result column="priture_name" property="priture_name"/>
-        <result column="picture" property="picture"/>
-        <result column="foreign_id" property="foreign_id"/>
-    </resultMap>
+
     <resultMap id="Curriculum" type="api.pojo.Curriculum">
         <result column="id" property="id"/>
         <result column="menu_name" property="menu_name"/>
@@ -16,39 +11,12 @@
         <result column="curriculum_name" property="curriculum_name"/>
         <result column="course_introduction" property="course_introduction"/>
     </resultMap>
-    <resultMap id="College_News" type="api.pojo.College_News">
-        <result column="id" property="id"/>
-        <result column="creation_time" property="creation_time"/>
-        <result column="modification_time" property="modification_time"/>
-        <result column="title" property="title"/>
-        <result column="content" property="content"/>
-        <result column="source" property="source"/>
-    </resultMap>
-    <resultMap id="teacher" type="api.pojo.Teacher">
-        <result column="id" property="id"/>
-        <result column="creation_time" property="creation_time"/>
-        <result column="modification_time" property="modification_time"/>
-        <result column="name" property="name"/>
-        <result column="brief_introduction" property="brief_introduction"/>
-        <result column="age" property="age"/>
-        <result column="gender" property="gender"/>
-        <result column="qq_number" property="qq_number"/>
-        <result column="wechat_number" property="wechat_number"/>
-        <result column="introduce" property="introduce"/>
-    </resultMap>
-    <select id="Img" resultMap="img">
-        select * from picture_table where 1=1 and  type =#{type}
-        <if test="priture_name!=''">
-        and priture_name=#{priture_name}
-        </if>
-    </select>
+
+
+
     <select id="curriculum" resultMap="Curriculum">
         select * from curriculum_table
     </select>
-    <select id="College_News" resultMap="College_News">
-        select * from  college_news_table limit 2
-    </select>
-    <select id="teacher" resultMap="teacher">
-        select  * from teacher_table
-    </select>
+
+
 </mapper>

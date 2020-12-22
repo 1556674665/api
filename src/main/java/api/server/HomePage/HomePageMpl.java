@@ -18,16 +18,6 @@ public class HomePageMpl implements HomePageServer {
         return homePage.curriculum();
     }
     @Override
-    public List<College_News> College_News() {
-        return homePage.College_News();
-    }
-
-    @Override
-    public List<Img> Img(int type,String priture_name) {
-        return homePage.Img(type,priture_name);
-    }
-
-    @Override
     public List<Teacher> teacher() {
         return homePage.teacher();
     }

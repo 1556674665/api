@@ -1,7 +1,7 @@
 package api.Url;
 
-import api.dao.HomePageDAO;
-import api.pojo.Img;
+import api.pojo.Teacher;
+import api.server.Teacher.TeacherMpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,14 +10,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-
-public class School_environment
-{
+public class TeacherURl {
     @Autowired
-    HomePageDAO homePageDAO;
-    @RequestMapping("/environment")
+    TeacherMpl teacherMpl;
+
+    /**
+     *
+     * @return
+     */
+    @RequestMapping("/teacher")
     @ResponseBody
-    public List<Img> environment(){
-        return homePageDAO.Img(7,"");
+    public List<Teacher> teachers(){
+        return teacherMpl.teacher();
     }
 }

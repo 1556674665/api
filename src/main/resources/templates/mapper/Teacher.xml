@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="api.dao.TeacherDAO">
+    <resultMap id="teacher" type="api.pojo.Teacher">
+        <result column="id" property="id"/>
+        <result column="creation_time" property="creation_time"/>
+        <result column="modification_time" property="modification_time"/>
+        <result column="name" property="name"/>
+        <result column="brief_introduction" property="brief_introduction"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="qq_number" property="qq_number"/>
+        <result column="wechat_number" property="wechat_number"/>
+        <result column="introduce" property="introduce"/>
+    </resultMap>
+    <select id="teacher" resultMap="teacher">
+        select  * from teacher_table
+    </select>
+</mapper>

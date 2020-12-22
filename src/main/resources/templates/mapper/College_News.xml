@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="api.dao.College_NewsDAO">
+    <resultMap id="College_News" type="api.pojo.College_News">
+        <result column="id" property="id"/>
+        <result column="creation_time" property="creation_time"/>
+        <result column="modification_time" property="modification_time"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="source" property="source"/>
+    </resultMap>
+    <select id="College_News" resultMap="College_News">
+        select * from  college_news_table limit 2
+    </select>
+</mapper>

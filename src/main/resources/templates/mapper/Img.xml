@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="api.dao.ImgDAO">
+    <resultMap id="img" type="api.pojo.Img">
+        <result column="id" property="id"/>
+        <result column="priture_name" property="priture_name"/>
+        <result column="picture" property="picture"/>
+        <result column="foreign_id" property="foreign_id"/>
+    </resultMap>
+    <select id="Img" resultMap="img">
+        select * from picture_table where 1=1 and  type =#{type}
+        <if test="priture_name!=''">
+            and priture_name=#{priture_name}
+        </if>
+    </select>
+</mapper>

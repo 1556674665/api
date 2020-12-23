@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface TeacherDAO
 {
-    List<Teacher> teacher();//老师
+    List<Teacher> teacher(int limit);//老师
 }
 

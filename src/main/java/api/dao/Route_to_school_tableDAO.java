@@ -1,6 +1,7 @@
 package api.dao;
 
-import api.pojo.Img;
+
+import api.pojo.Route_to_school_table;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface ImgDAO
+public interface Route_to_school_tableDAO
 {
-    List<Img> Img(int type, int id);//获取图片
+    List<Route_to_school_table> Select();
 }

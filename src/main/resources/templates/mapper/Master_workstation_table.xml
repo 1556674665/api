@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="api.dao.Master_workstation_tableDAO">
+    <resultMap id="Master_workstation_table" type="api.pojo.Master_workstation_table">
+        <result column="id" property="id"/>
+        <result column="creation_date" property="creation_date"/>
+        <result column="modification_date" property="modification_date"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="source" property="source"/>
+    </resultMap>
+    <select id="Select" resultMap="Master_workstation_table">
+        select * from master_workstation_table
+         <if test="limit!=0">
+             limit #{limit}
+         </if>
+
+    </select>
+</mapper>

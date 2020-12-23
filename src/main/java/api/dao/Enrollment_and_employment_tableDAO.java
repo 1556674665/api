@@ -1,6 +1,6 @@
 package api.dao;
 
-import api.pojo.Img;
+import api.pojo.Enrollment_and_employment_table;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface ImgDAO
+public interface Enrollment_and_employment_tableDAO
 {
-    List<Img> Img(int type, int id);//获取图片
+    List<Enrollment_and_employment_table> Select(int limit);
 }

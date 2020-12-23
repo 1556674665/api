@@ -11,7 +11,7 @@ public class TeacherMpl implements TeacherServer{
     @Autowired
     TeacherDAO teacherDAO;
     @Override
-    public List<Teacher> teacher() {
-        return teacherDAO.teacher();
+    public List<Teacher> teacher(int limit) {
+        return teacherDAO.teacher(limit);
     }
 }

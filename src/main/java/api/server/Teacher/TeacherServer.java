@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface TeacherServer
 {
-    List<Teacher> teacher();//老师
+    List<Teacher> teacher(int limit);//老师
 }

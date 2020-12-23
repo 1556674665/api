@@ -1,6 +1,6 @@
 package api.dao;
 
-import api.pojo.Img;
+import api.pojo.Master_workstation_table;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +8,8 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface ImgDAO
+public interface Master_workstation_tableDAO //工作站
 {
-    List<Img> Img(int type, int id);//获取图片
+    List<Master_workstation_table> Select(int limit);
 }
+

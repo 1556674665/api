@@ -5,18 +5,112 @@
     <title>测试</title>
 </head>
 <body onload="a()">
-<img src="/image/3.png" onclick="a()">
-<input type="button" onclick="a()">
+<img src="/image/3.png" >
+845128745124896512784521415555555
+445
+54
+54
+54
+545
+45
+45
+45
+45
+45
+45
+45
+45
+54
 </body>
 <script src="js/jquery.js"></script>
 <script>
-    a()
     function a(){
         $.ajax(
             {
                 type:"post",
-                url:"/Homepage",
+                url:"/Curriculumtable",
                 success:function (reust) {
+                    console.log("课程：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/College_News",
+                data:{limit:20},//limit:数量
+                success:function (reust) {
+                    console.log("新闻：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/Enrollment_and_employment_tableMpl",
+                success:function (reust) {
+                    console.log("招生就业：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/Master_workstation_table",
+                data: {type:2,id:1},//type:图片类型 id：id
+                success:function (reust) {
+                    console.log("图片：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/Master_workstation_table",
+                data:{limit:20},//limit:数量
+                success:function (reust) {
+                    console.log("工作站：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/Route_to_school_table",
+                success:function (reust) {
+                    console.log("来校路线：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/School_introduction",
+                success:function (reust) {
+                    console.log("学校介绍：")
+                    console.log(reust)
+                }
+
+            }
+        )
+        $.ajax(
+            {
+                type:"post",
+                url:"/teacher",
+                success:function (reust) {
+                    console.log("老师：")
                     console.log(reust)
                 }
 

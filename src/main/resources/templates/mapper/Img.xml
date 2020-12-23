@@ -9,9 +9,6 @@
         <result column="foreign_id" property="foreign_id"/>
     </resultMap>
     <select id="Img" resultMap="img">
-        select * from picture_table where 1=1 and  type =#{type}
-        <if test="priture_name!=''">
-            and priture_name=#{priture_name}
-        </if>
+        select * from picture_table where  type =#{type} and foreign_id=#{id}
     </select>
 </mapper>

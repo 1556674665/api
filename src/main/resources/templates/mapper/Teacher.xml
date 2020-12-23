@@ -15,6 +15,6 @@
         <result column="introduce" property="introduce"/>
     </resultMap>
     <select id="teacher" resultMap="teacher">
-        select  * from teacher_table
+        select  * from teacher_table<if test="limit!=0"> limit #{limit} </if>
     </select>
 </mapper>

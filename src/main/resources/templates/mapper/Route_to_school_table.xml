@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="api.dao.Route_to_school_tableDAO">
+    <resultMap id="Route_to_school_table" type="api.pojo.Route_to_school_table">
+        <result column="id" property="id"/>
+        <result column="create_date" property="create_date"/>
+        <result column="modify_date" property="modify_date"/>
+        <result column="registration_telephone" property="registration_telephone"/>
+        <result column="school_address" property="school_address"/>
+        <result column="school_website" property="school_website"/>
+        <result column="nearby_bus_stop" property="nearby_bus_stop"/>
+        <result column="nearby_bus" property="nearby_bus"/>
+    </resultMap>
+    <select id="Select" resultMap="Route_to_school_table">
+        select * from route_to_school_table
+    </select>
+</mapper>

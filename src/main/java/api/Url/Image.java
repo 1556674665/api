@@ -85,5 +85,9 @@ public class Image {//返回图片和文件
             if (out!=null)out.close();
         }
     }
+    @RequestMapping("/cs")
+    public String cs(){
+        return "测试";
+    }
 }
 

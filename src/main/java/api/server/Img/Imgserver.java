@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface Imgserver
 {
-    List<Img> Img(int type, String priture_name);//获取图片
+    List<Img> Img(int type,int id);//获取图片
 
 }

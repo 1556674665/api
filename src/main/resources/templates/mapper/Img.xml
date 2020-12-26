@@ -4,11 +4,21 @@
 <mapper namespace="api.dao.ImgDAO">
     <resultMap id="img" type="api.pojo.Img">
         <result column="id" property="id"/>
-        <result column="priture_name" property="priture_name"/>
-        <result column="picture" property="picture"/>
+        <result column="picture_name" property="picture_name"/>
+        <result column="picture_url" property="picture_url"/>
+        <result column="create_date" property="create_date"/>
+        <result column="modify_date" property="modify_date"/>
+        <result column="type_id" property="type_id"/>
         <result column="foreign_id" property="foreign_id"/>
     </resultMap>
     <select id="Img" resultMap="img">
-        select * from picture_table where  type =#{type} and foreign_id=#{id}
+        select * from picture_table where 1=1
+         <if test="type!=0">
+             and type_id =#{type}
+         </if>
+        <if test="id!=0">
+            and foreign_id=#{id}
+        </if>
+
     </select>
 </mapper>

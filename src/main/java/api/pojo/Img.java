@@ -2,8 +2,11 @@ package api.pojo;
 
 public class Img {//图片表
     private  int id;
-    private  String priture_name;
-    private  String  picture;
+    private  String picture_name;
+    private  String  picture_url;
+    private  String  create_date;
+    private  String  modify_date;
+    private  int  type_id;
     private  int foreign_id;
 
     public int getId() {
@@ -14,19 +17,19 @@ public class Img {//图片表
         this.id = id;
     }
 
-    public String getPicture() {
-        return picture;
+    public String getPicture_url() {
+        return picture_url;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setPicture_url(String picture_url) {
+        this.picture_url = picture_url;
     }
-    public String getPriture_name() {
-        return priture_name;
+    public String getPicture_name() {
+        return picture_name;
     }
 
-    public void setPriture_name(String priture_name) {
-        this.priture_name = priture_name;
+    public void setPicture_name(String picture_name) {
+        this.picture_name = picture_name;
     }
 
     public int getForeign_id() {
@@ -35,5 +38,29 @@ public class Img {//图片表
 
     public void setForeign_id(int foreign_id) {
         this.foreign_id = foreign_id;
+    }
+
+    public String getCreate_date() {
+        return create_date;
+    }
+
+    public void setCreate_date(String create_date) {
+        this.create_date = create_date;
+    }
+
+    public String getModify_date() {
+        return modify_date;
+    }
+
+    public void setModify_date(String modify_date) {
+        this.modify_date = modify_date;
+    }
+
+    public int getType_id() {
+        return type_id;
+    }
+
+    public void setType_id(int type_id) {
+        this.type_id = type_id;
     }
 }

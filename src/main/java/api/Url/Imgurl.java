@@ -24,8 +24,10 @@ public class Imgurl {//图片
      */
     @RequestMapping("/img")
     @ResponseBody
-    public List<Img> Img(@RequestParam int  type, @RequestParam int id)
+    public List<Img> Img(@RequestParam(value = "type",defaultValue = "0") int  type, @RequestParam(value = "id",defaultValue = "0") int id)
     {
+        System.out.println(type);
+        System.out.println(id);
         return imgserver.Img(type, id);
     }
 }

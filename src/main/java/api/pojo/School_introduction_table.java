@@ -2,11 +2,21 @@ package api.pojo;
 
 public class School_introduction_table
 {
+    /**
+     * 主键
+     * 创建时间
+     * 修改时间
+     * 赛杰简介
+     * 教学优势
+     * 学院荣誉
+     * 学校名称
+     */
     private int id;
     private String creation_date;
     private String modification_date;
     private String brief_introduction;
     private String teaching_advantages;
+    private String school_name;
 
     public int getId() {
         return id;
@@ -46,5 +56,13 @@ public class School_introduction_table
 
     public void setTeaching_advantages(String teaching_advantages) {
         this.teaching_advantages = teaching_advantages;
+    }
+
+    public String getSchool_name() {
+        return school_name;
+    }
+
+    public void setSchool_name(String school_name) {
+        this.school_name = school_name;
     }
 }

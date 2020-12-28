@@ -11,6 +11,7 @@
         <result column="school_website" property="school_website"/>
         <result column="nearby_bus_stop" property="nearby_bus_stop"/>
         <result column="nearby_bus" property="nearby_bus"/>
+        <result column="school_name" property="school_name"/>
     </resultMap>
     <select id="Select" resultMap="Route_to_school_table">
         select * from route_to_school_table

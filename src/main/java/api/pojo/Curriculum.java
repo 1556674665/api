@@ -1,6 +1,13 @@
 package api.pojo;
 
 public class Curriculum {//课程
+    /**
+     * 主键
+     * 创建时间
+     * 修改时间
+     * 课程名称
+     * 课程简介
+     */
     private int id;
     private String menu_name;
     private String create_date;

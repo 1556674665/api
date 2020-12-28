@@ -2,6 +2,14 @@ package api.pojo;
 
 public class Enrollment_and_employment_table//招生就业
 {
+    /**
+     * 主键
+     * 创建时间
+     * 修改时间
+     * 标题
+     * 内容
+     * 来源
+     */
     private  int id;
     private String create_date;
     private String modify_date;

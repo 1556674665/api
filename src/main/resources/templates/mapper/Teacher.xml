@@ -4,15 +4,14 @@
 <mapper namespace="api.dao.TeacherDAO">
     <resultMap id="teacher" type="api.pojo.Teacher">
         <result column="id" property="id"/>
-        <result column="creation_time" property="creation_time"/>
-        <result column="modification_time" property="modification_time"/>
+        <result column="creation_date" property="creation_date"/>
+        <result column="modification_date" property="modification_date"/>
         <result column="name" property="name"/>
-        <result column="brief_introduction" property="brief_introduction"/>
-        <result column="age" property="age"/>
-        <result column="gender" property="gender"/>
-        <result column="qq_number" property="qq_number"/>
-        <result column="wechat_number" property="wechat_number"/>
         <result column="introduce" property="introduce"/>
+        <result column="positionp" property="positionp"/>
+        <result column="technical_expertise" property="technical_expertise"/>
+        <result column="project_experience" property="project_experience"/>
+
     </resultMap>
     <select id="teacher" resultMap="teacher">
         select  * from teacher_table<if test="limit!=0"> limit #{limit} </if>

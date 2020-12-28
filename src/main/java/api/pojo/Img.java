@@ -1,6 +1,15 @@
 package api.pojo;
 
 public class Img {//图片表
+    /**
+     * 主键
+     * 图片
+     * 创建时间
+     * 修改时间
+     * 类型
+     * 分类之后的id
+     * 图片名称
+     */
     private  int id;
     private  String picture_name;
     private  String  picture_url;

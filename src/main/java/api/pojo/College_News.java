@@ -1,6 +1,14 @@
 package api.pojo;
 
 public class College_News {//塞杰新闻
+    /**
+     * 主键
+     * 创建时间
+     * 修改时间
+     * 标题
+     * 内容
+     * 来源
+     */
     private  int id;	//主键
     private  String creation_time;	//创建时间
     private  String modification_time;	//修改时间

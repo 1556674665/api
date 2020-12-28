@@ -8,6 +8,7 @@
         <result column="modification_date" property="modification_date"/>
         <result column="brief_introduction" property="brief_introduction"/>
         <result column="teaching_advantages" property="teaching_advantages"/>
+        <result column="school_name" property="school_name"/>
     </resultMap>
     <select id="Select" resultMap="School_introduction_table">
         select  * from school_introduction_table

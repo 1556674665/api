@@ -2,6 +2,17 @@ package api.pojo;
 
 public class Route_to_school_table
 {
+    /**
+     * 主键
+     * 创建时间
+     * 修改时间
+     * 报名电话
+     * 学校地址
+     * 学院网址
+     * 附近公交站台
+     * 附近公交车
+     * 学校名称
+     */
     private int id;
     private String create_date;
     private String modify_date;
@@ -10,6 +21,7 @@ public class Route_to_school_table
     private String school_website;
     private String nearby_bus_stop;
     private String nearby_bus;
+    private String school_name;
 
     public int getId() {
         return id;
@@ -73,5 +85,13 @@ public class Route_to_school_table
 
     public void setNearby_bus(String nearby_bus) {
         this.nearby_bus = nearby_bus;
+    }
+
+    public String getSchool_name() {
+        return school_name;
+    }
+
+    public void setSchool_name(String school_name) {
+        this.school_name = school_name;
     }
 }

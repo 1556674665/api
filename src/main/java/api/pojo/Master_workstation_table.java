@@ -2,6 +2,14 @@ package api.pojo;
 
 public class Master_workstation_table //工作站
 {
+    /**
+     * 主键
+     * 创建时间
+     * 修改时间
+     * 标题
+     * 内容
+     * 来源
+     */
     private int id;
     private String creation_date;
     private String modification_date;
